@@ -1,0 +1,52 @@
+.didact-gothic-regular {
+  font-family: "Didact Gothic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+body {
+    font-family: "Didact Gothic", sans-serif;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+}
+
+#page {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  border: 1px solid #000;
+  padding: 4px 8px;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+header p {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+h1 {
+  border: 3px solid black;
+  padding: 5px;
+  margin-bottom: 20px;
+  text-align: ;
+}
+
+h2 {
+  font-size: 5em;
+  margin: 0;
+}
+
+main p {
+  column-count: 3;
+  column-gap: 30px;
+}

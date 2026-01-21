@@ -1,0 +1,80 @@
+@charset "UTF-8";
+
+/* Named Selector
+-------------------------------------------- */
+
+h2 {
+    color: red;
+    font-style: italic;
+}
+
+/* ID Selector
+-------------------------------------------- */
+#project {
+    color: olive;
+}
+
+/* class Selector
+-------------------------------------------- */
+.about {
+    background-color: lightgrey;
+}
+
+/* Contextual/Descendent Selector
+-------------------------------------------- */
+
+section p {
+    color: darkorange;
+}
+
+.subproject p {
+    color: darkblue;
+}
+
+/* Grouped Selector
+--------------------------------------------- */
+h1, h2, h3 {
+    
+    font-family: sans-serif;
+}
+
+/* Pseudoclass Selector
+--------------------------------------------- */
+a:link {
+    text-decoration: none;
+    color: darkgreen;
+    font-weight: bold;
+}
+
+a:visited {
+    color: red;
+}
+
+a:focus {
+    background-color: yellow;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    color: darkorange;
+}
+
+/* Structural Pseudo-Class Selector
+----------------------------------------------- */
+li:nth-child(3n-1) {
+    background-color: lightblue;
+}
+
+li:nth-of-type(odd) {
+    font-weight: bold;
+}
+
+article section:last-of-type {
+    background-color: lightgray;
+}
+
+/* pseudo-element selector
+------------------------------------------------ */
