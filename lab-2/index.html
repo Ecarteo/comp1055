@@ -13,34 +13,50 @@ to match as closely as you can with the colors
 on the FIRST paint swatch card provided.
 -------------------------------------------------- */
 	#hex div:nth-of-type(1) {
-		background-color: red;
+		background-color: #bb649b;
 	}
 	#hex div:nth-of-type(2) {
-		background-color: orange;
+		background-color: #d477c0;
 	}
 	#hex div:nth-of-type(3) {
-		background-color: yellow;
+		background-color: #f9c7e8;
 	}
 	#hex div:nth-of-type(4) {
-		background-color: limegreen;
+		background-color: #f4cde8;
 	}
 /* STEP 2: Set each color in rgba format
 to match as closely as you can with the colors
 on the SECOND paint swatch card provided.
 -------------------------------------------------- */
 	#rgba div:nth-of-type(1) {
-		background-color: red;
+		background-color: rgba(130, 51, 14, 0.89);
 	}
-	/* ...and so on... */
+	#rgba div:nth-of-type(2) {
+		background-color: rgba(221, 96, 38, 0.89);
+	}
+	#rgba div:nth-of-type(3) {
+		background-color: rgba(191, 76, 22, 0.89);
+	}
+	#rgba div:nth-of-type(4) {
+		background-color: rgba(90, 39, 14, 0.89);
+	}
 
 /* STEP 3: Set each color in hsla format
 to match as closely as you can with the colors
 on the THIRD paint swatch card provided.
 -------------------------------------------------- */
 	#hsla div:nth-of-type(1) {
-		background-color: red;
+		background-color: hsla(35, 77%, 41%, 0.9);
 	}
-	/* ...and so on... */
+	#hsla div:nth-of-type(2) {
+		background-color: hsla(39, 100%, 54%, 0.989);
+	}
+	#hsla div:nth-of-type(3) {
+		background-color: hsla(35, 100%, 54%, 0.9);
+	}
+	#hsla div:nth-of-type(4) {
+		background-color: hsl(37, 89%, 69%, 0.9);
+	}
 
 	/* STEP 4: Set each color using a CSS color keywords
 (https://developer.mozilla.org/en-US/docs/Web/CSS/color_value)
@@ -50,9 +66,21 @@ produce an exact rendition of the swatch colors on the FOURTH card provided.
 (https://developer.mozilla.org/en-US/docs/Web/CSS/filter).
 -------------------------------------------------- */
 	#keyword div:nth-of-type(1) {
-		background-color: red;
+		background-color: saddlebrown;
+		filter: hue-rotate(2deg) brightness(73%);
 	}
-	/* ...and so on... */
+	#keyword div:nth-of-type(2) {
+		background-color:sandybrown;
+		filter: hue-rotate(2deg) contrast(75%);
+	}
+	#keyword div:nth-of-type(3) {
+		background-color:peru;
+		filter: saturate(90%) brightness(80%);
+	}
+	#keyword div:nth-of-type(4) {
+		background-color: sienna;
+		filter: hue-rotate(5deg) brightness(90%) saturate(90%);
+	}
 
 	/* STEP 5: Describe one or more things that you can do to ensure that the colour rendering on your screen is exactly the same (or as close as possible) to the colours on your paint chip cards. If possible, attempt to do one or more of these things and describe what you did and what you found out. Maybe a screenshot, too if it might help. */
 </style>
