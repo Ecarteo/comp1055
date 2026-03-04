@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -109,3 +110,117 @@
 <div class="gradient-generator"><p>gradient generator</p></div>
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Gradient Backgrounds</title>
+	<style>
+		body {
+			padding: 1.25em;
+			font-size: 100%;
+			background-color: #ccc;
+		}
+
+		div {
+			float: left;
+			height: 150px;
+			margin: 10px;
+			width: 150px;
+			background-color: silver;
+		}
+
+		p {
+			color: #fff;
+			font: bold 1.25em/1 sans-serif;
+			padding-top: 1.65em;
+			text-align: center;
+		}
+		/* STEP 1: LINEAR GRADIENTS
+		------------------------------------------ */
+		/* Vertical */
+		.vertical-down {
+			background-color: silver;
+			/* default gradient, so you don't need to specify "to bottom" before the colors */
+			background: linear-gradient(to bottom, silver, black);
+		}
+		.vertical-up {
+			background: linear-gradient(to top, silver, black);
+		}
+		/* Horizontal */
+		.horizontal-rt {
+			background: linear-gradient(to right, silver, black);
+		}
+		.horizontal-lt {
+			background: linear-gradient(to left, silver, black);
+		}
+		/* Diagonal Angles */
+		.angle-corners {
+			background: linear-gradient(to bottom right, silver, black);
+		}
+		/* Angles via Degrees */
+		.angle-deg {
+			background: linear-gradient(120deg, silver, black);
+		}
+
+		/* STEP 2: RADIAL GRADIENTS
+		------------------------------------------ */
+		.radial p {
+
+		}
+		.radial-center {
+			background: radial-gradient(yellow, red);
+		}
+		.radial-top {
+			background: radial-gradient(at top left, yellow, red);
+		}
+		.radial-size-1 {
+			background: radial-gradient(ellipse at bottom, yellow, red);
+		}
+		.radial-size-2 {
+			background: radial-gradient(ellipse at top, yellow, red);
+		}
+
+		/* STEP 3: LINEAR GRADIENTS WITH COLOR STOPS
+		------------------------------------------ */
+		.color-stops div {
+		}
+
+		.color-stops p {
+		}
+
+		.color-stops {
+			background: linear-gradient(to top, yellow 40%, green);
+		}
+		/* STEP 4: Use a color gradient CSS generator - http://www.colorzilla.com/gradient-editor/ */
+		.gradient-generator {
+			/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1e5799+14,c4a125+33,bc1e85+58,f9ef27+84,7db9e8+100&1+0,0.71+57 */
+			background: linear-gradient(45deg,  rgba(30,87,153,1) 0%,rgba(30,87,153,0.93) 14%,rgba(196,161,37,0.83) 33%,rgba(188,35,129,0.71) 57%,rgba(188,30,133,0.71) 58%,rgba(249,239,39,0.71) 84%,rgba(125,185,232,0.71) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		}
+	</style>
+</head>
+<body>
+<div class="vertical-down"><p>default</p></div>
+<div class="vertical-up"><p>to top</p></div>
+
+<div class="horizontal-rt"><p>to right</p></div>
+<div class="horizontal-lt"><p>to left</p></div>
+
+<div class="angle-corners"><p>corner to corner</p></div>
+
+<div class="angle-deg"><p>degrees</p></div>
+
+<section class="radial">
+	<div class="radial-center"><p>default</p></div>
+	<div class="radial-top"><p>at top</p></div>
+
+	<div class="radial-size-1"><p>radial size 1</p></div>
+	<div class="radial-size-2"><p>radial size 2</p></div>
+</section>
+
+<div class="color-stops"><p>color stops</p></div>
+<div class="gradient-generator"><p>gradient generator</p></div>
+</body>
+</html>
+>>>>>>> upstream/main

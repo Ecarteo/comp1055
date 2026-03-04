@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,3 +35,45 @@
 <p class="multiple">Multiple Text Shadows</p>
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Text Shadow | COMP1054 Web User Interface Design</title>
+	<style>
+		body {
+			font-family: Helvetica, Arial, sans-serif;
+			font-size: 300%;
+			color: red;
+		}
+		/* STEP 1: Basic shadow with x and y offset */
+		.basic {
+			text-shadow: 2px 3px;
+		}
+		/* STEP 2: Basic shadow with offset plus color */
+		.basic-color {
+			text-shadow: -2px -3px hsl(260deg 60% 50% / 0.8);
+		}
+		/* STEP 3: Text shadow with a blur radius */
+		.blur {
+			text-shadow: 3px 2px 5px grey;
+		}
+		/* STEP 4: Multiple text shadows */
+		.multiple {
+			text-shadow:
+				5px 5px 2px orange,
+				-5px 0 1px lime,
+				0 5px hotpink,
+				5px 5px 3px cyan;
+		}
+	</style>
+</head>
+<body>
+<p class="basic">Basic Shadow</p>
+<p class="basic-color">Basic Shadow with Color</p>
+<p class="blur">Blur Radius</p>
+<p class="multiple">Multiple Text Shadows</p>
+</body>
+</html>
+>>>>>>> upstream/main

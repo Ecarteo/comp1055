@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,3 +32,46 @@
 	<h2>Text Stroke</h2>
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Text Clipping</title>
+	<style>
+		body {
+			background-color: black;
+			color: white;
+		}
+		h1 {
+			font: 1200%/1.2 Impact, sans-serif;
+			text-align: center;
+			/* STEP 1: Apply the gradient that you generated on the previous page as the background for the <h1> element, or use the photo of a sunset in the img/ directory */
+			/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1e5799+14,c4a125+33,bc1e85+58,f9ef27+84,7db9e8+100&1+0,0.71+57 */
+			background: linear-gradient(45deg,  rgba(30,87,153,1) 0%,rgba(30,87,153,0.93) 14%,rgba(196,161,37,0.83) 33%,rgba(188,35,129,0.71) 57%,rgba(188,30,133,0.71) 58%,rgba(249,239,39,0.71) 84%,rgba(125,185,232,0.71) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			/* STEP 2: Set the text color to transparent (dangerous) */
+			color: transparent;
+			/* STEP 3: Set the background-clip (and -webkit-background-clip) property to text */
+			/* -webkit-background-clip: text; */
+			background-clip: text;
+		}
+		h2 {
+			/* STEP 4a: Apply another non-standard visual effect -webkit-text-stroke-color (and width) */
+			color: white;
+			font: 1200%/1.2 Impact, sans-serif;
+			text-align: center;
+			font-weight: normal;
+			/* STEP 4b: Since text-stroke is center-aligned on the outline of the font, use paint-order to address this ugly default (https://css-tricks.com/text-stroke-stuck-middle/) */
+			-webkit-text-stroke: 40px red;
+			paint-order: stroke fill;
+
+		}
+		/* "Florida gulf coast" By Mmacbeth - Own work, CC0, https://commons.wikimedia.org/w/index.php?curid=39319981 */
+	</style>
+</head>
+<body>
+	<h1>Text Clipping</h1>
+	<h2>Text Stroke</h2>
+</body>
+</html>
+>>>>>>> upstream/main

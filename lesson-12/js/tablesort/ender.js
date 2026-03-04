@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 !function ($) {
     $.ender({
         tablesort: function (options) {
@@ -7,3 +8,14 @@
         }
     }, true);
 }(ender);
+=======
+!function ($) {
+    $.ender({
+        tablesort: function (options) {
+            return this.forEach(function (el) {
+                new Tablesort(el, options);
+            });
+        }
+    }, true);
+}(ender);
+>>>>>>> upstream/main
