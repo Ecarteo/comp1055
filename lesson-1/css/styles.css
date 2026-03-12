@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-@charset "UTF-8";
+/* @charset "UTF-8"; */
 
 /* Named Selector
 -------------------------------------------- */
@@ -79,8 +78,7 @@ article section:last-of-type {
 
 /* pseudo-element selector
 ------------------------------------------------ */
-=======
-@charset "UTF-8";
+/* @charset "UTF-8"; */
 
 /* Named Selector
 -------------------------------------------------- */
@@ -149,4 +147,3 @@ article section:last-of-type {
 h1 + p::first-line {
     text-transform: uppercase;
 }
->>>>>>> upstream/main
