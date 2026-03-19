@@ -1,0 +1,73 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* Box-sizing reset (https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/) */
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+html {
+    font-family: "Open Sans", sans-serif;
+}
+#container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/*
+   TAB WIDGET STYLES 
+*/
+
+/* 1. The Tab List (ul) */
+ul[role="tablist"] {
+    display: flex;       /* Puts the tabs side-by-side */
+    list-style: none;    /* Removes the default bullet points */
+    padding: 0;
+    margin: 0;
+    position: relative;
+    z-index: 2;          /* Keeps tabs layered above the content box border */
+}
+
+/* 2. Individual Tab Items (li) */
+li[role="tab"] {
+    margin-right: 5px;   /* Small gap between the tabs */
+}
+
+/* 3. The Tab Links (a) - Default Inactive State */
+li[role="tab"] a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+    background-color: #dcdcdc;     /* Light grey background for inactive tabs */
+    border-radius: 5px 5px 0 0;    /* Rounds the top left and right corners */
+    border: 1px solid transparent; /* Invisible border to keep sizes consistent */
+    font-weight: bold;
+}
+
+/* 4. The Tab Links (a) - Active State */
+/* JavaScript will add this 'active' class when clicked */
+li[role="tab"] a.active {
+    background-color: #fff;        /* White background matches the content area */
+    border: 1px solid #333;        /* Dark border around the active tab */
+    border-bottom: 1px solid #fff; /* White bottom border to blend into the box below */
+    margin-bottom: -1px;           /* Pulls it down 1px to overlap the content border */
+}
+
+/* 5. The Content Panels (div) */
+div[role="tabpanel"] {
+    display: none;             /* Hides all panels initially */
+    border: 1px solid #333;    /* Dark border around the content */
+    padding: 20px;
+    background-color: #fff;
+    position: relative;
+    z-index: 1;                /* Sits beneath the active tab's overlap */
+}
+
+/* JavaScript will add this 'active' class to show the correct panel */
+div[role="tabpanel"].active {
+    display: block;
+}
