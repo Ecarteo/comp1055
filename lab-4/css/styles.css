@@ -75,3 +75,25 @@ body {
     height: 48px;
     width: 48px; 
 }
+
+/* zebra striping for even rows */
+.standings-table tbody tr:nth-child(even) {
+    background-color: #f4f6f8;
+}
+
+/* add highlight when hovering rows */
+.standings-table tbody tr:hover {
+    background-color: #e2e6ea;
+    transition: background-color 0.2s ease;
+}
+
+/* colors for the diff column */
+.diff-positive {
+    color: #28a745; 
+    font-weight: bold;
+}
+
+.diff-negative {
+    color: #dc3545; 
+    font-weight: bold;
+}
