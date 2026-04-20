@@ -1,0 +1,250 @@
+/* * Style Stage Challenge
+ * Author: Matthew Calderon Arce
+ * Description: Clean, modern, and responsive design using CSS fundamentals.
+ */
+
+/* =========================================
+   1. RESET AND VARIABLES
+   ========================================= */
+* { /* Basic reset */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root { /* Color variables */
+    --primary-color: #d81b60; 
+    --secondary-color: #f06292; 
+    --accent-color: #ffb74d; 
+    --bg-color: #fce4ec; 
+    --container-bg: #ffffff; 
+    --text-color: #333333; 
+}
+
+body { /* Base styles */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* =========================================
+   2. TYPOGRAPHY AND GENERAL
+   ========================================= */
+h1, h2, h3, h4 { /* Heading colors */
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+p, ul, ol { /* Text spacing */
+    margin-bottom: 1rem;
+}
+
+a { /* Link styles */
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover { /* Hover state */
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+.container { /* Content centering */
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+blockquote { /* Quote styling */
+    border-left: 5px solid var(--secondary-color);
+    background-color: #ffffff;
+    padding: 15px;
+    font-style: italic;
+    margin: 20px 0;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+}
+
+/* =========================================
+   3. HEADER
+   ========================================= */
+header { /* Main header */
+    background: linear-gradient(135deg, #d81b60 0%, #ad1457 100%);
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+header h1 { /* Dynamic title */
+    font-size: clamp(2.5rem, 8vw, 4rem);
+    color: white;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    letter-spacing: -1px;
+}
+
+header h2, header p { /* Header text */
+    color: #fce4ec;
+    opacity: 0.9;
+}
+
+.link-github { /* Github button */
+    display: inline-flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 8px 16px;
+    border-radius: 20px;
+    color: white;
+    font-size: 0.9rem;
+    margin-top: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.link-github svg { /* Star icon */
+    width: 1.5rem;
+    height: 1.5rem;
+    vertical-align: middle;
+    margin-right: 8px;
+    fill: currentColor;
+}
+
+/* =========================================
+   4. NAVIGATION
+   ========================================= */
+nav { /* Sticky menu */
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul { /* Flex navigation */
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+}
+
+nav ul li { /* Item spacing */
+    margin: 5px 0;
+}
+
+nav ul a { /* Nav links */
+    color: var(--primary-color);
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+/* =========================================
+   5. MAIN CONTENT
+   ========================================= */
+main .container { /* Main wrapper */
+    background-color: var(--container-bg);
+    padding: 30px;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+article { /* Section divider */
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+article:last-child { /* Remove border */
+    border-bottom: none;
+}
+
+.skip-link { /* Accessibility link */
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.skip-link:focus { /* Visible focus */
+    position: static;
+    width: auto;
+    height: auto;
+}
+
+/* =========================================
+   6. FOOTER AND ASIDE
+   ========================================= */
+.page-footer { /* Page footer */
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 40px;
+}
+
+.page-footer p { /* Footer text */
+    color: #fce4ec;
+}
+
+.page-footer ul { /* Footer list */
+    list-style: none;
+    padding: 0;
+}
+
+aside { /* Sidebar info */
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1000px;
+    border-radius: 8px;
+    border-left: 5px solid var(--accent-color);
+}
+
+/* =========================================
+   7. DESKTOP LAYOUT
+   ========================================= */
+@media (min-width: 768px) { /* Desktop styles */
+    nav ul { /* Horizontal nav */
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    nav ul li { /* Desktop spacing */
+        margin: 0 15px;
+    }
+
+    .features { /* Grid layout */
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        padding: 0;
+        list-style: none;
+    }
+
+    .features li { /* Grid items */
+        background-color: var(--bg-color);
+        padding: 20px;
+        border-radius: 5px;
+        text-align: center;
+        border: 1px solid #ddd;
+    }
+
+    .page-footer ul { /* Footer grid */
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+    }
+}
+
+/* Citations:
+Flexbox: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+Box model: https://www.w3schools.com/css/css_boxmodel.asp
+Variables: https://www.w3schools.com/css/css3_variables.asp
+
+I'm not sure if we went through variables in CSS but I already used them in past projects.
+I used these sources for Flexbox and box model to make sure I was using them properly.
+*/
